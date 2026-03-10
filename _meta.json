@@ -1,0 +1,10 @@
+{
+  "ownerId": "kn794dttk9kvhr88383mrqysr4h82jkja",
+  "slug": "health-guardian",
+  "version": "1.0.0",
+  "publishedAt": 1773148800000,
+  "author": "davidme6",
+  "license": "MIT",
+  "tags": ["health", "fitness", "weight-loss", "reminders", "wechat", "notifications"],
+  "changelog": "V1.0.0: Initial release - Comprehensive health management with weight loss tracking, hydration reminders, exercise suggestions, sleep optimization, weather integration, and WeChat/Enterprise WeChat notifications"
+}
