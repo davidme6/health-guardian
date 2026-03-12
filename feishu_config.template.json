@@ -1,0 +1,9 @@
+{
+  "app_id": "cli_xxxxxxxxxxxxx",
+  "app_secret": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+  "app_access_token": "",
+  "verification_token": "xxxxxxxxxxxxxxxxx",
+  "bot_name": "健康管家",
+  "server_port": 8080,
+  "public_url": "http://你的服务器 IP:8080/feishu/event"
+}

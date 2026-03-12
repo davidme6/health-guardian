@@ -1,10 +1,10 @@
 {
   "ownerId": "kn794dttk9kvhr88383mrqysr4h82jkja",
   "slug": "health-guardian",
-  "version": "3.0.0-multiuser",
+  "version": "3.1.0-feishu-interactive",
   "publishedAt": 1773148800000,
   "author": "davidme6",
   "license": "MIT",
-  "tags": ["health", "fitness", "weight-loss", "reminders", "anti-aging", "lancet-study", "feishu", "multi-user", "interactive", "calorie-tracking", "notifications"],
-  "changelog": "V3.0.0-multiuser: Added multi-user support with individual health profiles. Interactive Feishu notifications that ask for real-time data. Scientific calorie calculation using Mifflin-St Jeor formula. BMR/TDEE calculation, macro distribution, meal planning. Food calorie database and analysis. Dedicated Feishu notification group for health alerts only. All notifications sent to Feishu group, not development chat."
+  "tags": ["health", "fitness", "weight-loss", "reminders", "anti-aging", "lancet-study", "feishu", "multi-user", "interactive", "calorie-tracking", "two-way-communication", "bot"],
+  "changelog": "V3.1.0-feishu-interactive: Added Feishu two-way interactive communication. Users can now @HealthGuardian in the Feishu group and get instant automated responses. Features include: intelligent message recognition for water intake, exercise, food, weight, and sleep tracking; real-time data analysis and personalized recommendations; automatic progress calculation; motivational feedback. Complete Feishu app setup guide included. Server listens on port 8080 for Feishu events. Full documentation in FEISHU_APP_SETUP.md."
 }
