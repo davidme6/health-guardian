@@ -5,6 +5,6 @@
   "publishedAt": 1773148800000,
   "author": "davidme6",
   "license": "MIT",
-  "tags": ["health", "fitness", "weight-loss", "reminders", "anti-aging", "notifications", "feishu"],
-  "changelog": "V2.0.0-antiaging: Added anti-aging features - skin care reminders, antioxidant nutrition tips, sunscreen alerts, stretching exercises, vitamin C/E/Omega-3 supplement reminders, sleep optimization for cellular repair. Integrated with OpenClaw Feishu channel for notifications."
+  "tags": ["health", "fitness", "weight-loss", "reminders", "anti-aging", "lancet-study", "notifications", "feishu", "tcm-wisdom"],
+  "changelog": "V2.0.0-antiaging: Integrated Douyin video wisdom (日出而作/日入而息/清茶淡饭/不劳心力/顺应自然) + Lancet study (3 golden standards: sleep/exercise/diet can extend life by 9+ years). Added skin care reminders, antioxidant nutrition tips, stretching exercises, sleep optimization. Full OpenClaw Feishu integration."
 }
