@@ -1,0 +1,11 @@
+# Health Guardian Reminder State
+# This file is checked by OpenClaw heartbeat
+
+{
+  "lastCheck": null,
+  "pendingReminders": [],
+  "config": {
+    "enabled": true,
+    "channel": "feishu"
+  }
+}

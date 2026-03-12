@@ -1,10 +1,10 @@
 {
   "ownerId": "kn794dttk9kvhr88383mrqysr4h82jkja",
   "slug": "health-guardian",
-  "version": "1.0.0",
+  "version": "2.0.0-antiaging",
   "publishedAt": 1773148800000,
   "author": "davidme6",
   "license": "MIT",
-  "tags": ["health", "fitness", "weight-loss", "reminders", "wechat", "notifications"],
-  "changelog": "V1.0.0: Initial release - Comprehensive health management with weight loss tracking, hydration reminders, exercise suggestions, sleep optimization, weather integration, and WeChat/Enterprise WeChat notifications"
+  "tags": ["health", "fitness", "weight-loss", "reminders", "anti-aging", "notifications", "feishu"],
+  "changelog": "V2.0.0-antiaging: Added anti-aging features - skin care reminders, antioxidant nutrition tips, sunscreen alerts, stretching exercises, vitamin C/E/Omega-3 supplement reminders, sleep optimization for cellular repair. Integrated with OpenClaw Feishu channel for notifications."
 }

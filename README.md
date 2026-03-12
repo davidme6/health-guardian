@@ -1,15 +1,15 @@
-# 🏥 Health Guardian - 个人健康管家
+# 🏥 Health Guardian - 健康管理系统（新增抗衰老）
 
-**全方位健康管理 · 科学减肥 · 智能提醒 · 个性化建议**
+**全方位健康管理 · 科学减肥 · 智能提醒 · 抗衰老优化**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/davidme6/openclaw/tree/main/skills/health-guardian)
+[![Version](https://img.shields.io/badge/version-2.0.0--antiaging-blue.svg)](https://github.com/davidme6/openclaw/tree/main/skills/health-guardian)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ## 🎯 功能特性
 
 ### 💧 智能喝水提醒
 - 根据体重自动计算每日饮水量
-- 定时提醒，支持企业微信通知
+- 定时提醒，支持飞书通知
 - 根据天气温度自动调整建议
 
 ### 🏃 个性化运动计划
@@ -38,9 +38,17 @@
 - 空气质量提醒
 
 ### 📱 多渠道通知
-- OpenClaw Web 通知
-- 企业微信机器人
+- OpenClaw 飞书通知
+- 企业微信机器人（可选）
 - 定时/手动触发
+
+### ✨ 抗衰老优化（新增）
+- 🧴 晨间/晚间护肤提醒
+- 🧬 抗氧化营养补充建议
+- ☀️ 防晒提醒
+- 🧘 拉伸放松指导
+- 🍊 维生素 C/E/Omega-3 补充提醒
+- 🌙 睡眠优化（黄金修复时间）
 
 ## 🚀 快速开始
 
@@ -66,7 +74,7 @@ python scripts/health_guardian.py init
 - 身高、体重、年龄
 - 健康状况（如睡眠呼吸暂停）
 - 使用设备（如呼吸机）
-- 企业微信 webhook（可选）
+- 飞书/企业微信 webhook（可选）
 - 所在城市
 
 ### 基本使用
@@ -84,7 +92,7 @@ python scripts/health_guardian.py log-weight 102.5
 # 查看健康状态
 python scripts/health_guardian.py status
 
-# 手动触发喝水提醒
+# 手动触发提醒
 python scripts/health_guardian.py remind water
 
 # 生成周报
@@ -126,70 +134,70 @@ python scripts/health_guardian.py weekly-report
   "user": {
     "height_cm": 178,
     "weight_kg": 103,
-    "age": 30,
+    "age": 33,
     "gender": "male",
     "goal": "lose_weight",
-    "target_weight_kg": 75
+    "target_weight_kg": 90
   },
   "health": {
     "conditions": ["sleep_apnea"],
-    "devices": ["cpap"]
+    "devices": ["cpap"],
+    "anti_aging_focus": ["skin_care", "nutrition", "sleep_optimization"]
   },
   "notifications": {
-    "wechat_webhook": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxx",
+    "channel": "feishu",
     "enabled": true
   },
-  "location": {
-    "city": "北京"
+  "anti_aging": {
+    "enabled": true,
+    "goals": [
+      "保持皮肤健康",
+      "延缓衰老进程",
+      "提高生活质量"
+    ]
   }
 }
 ```
 
-## 📱 企业微信通知配置
+## ⏰ 完整提醒时间表
 
-### 1. 创建机器人
-1. 企业微信 → 工作台 → 群机器人
-2. 添加机器人
-3. 复制 webhook URL
+| 时间 | 类型 | 说明 |
+|------|------|------|
+| 07:00 | 🧴 晨间护肤 | 洁面、保湿、防晒 |
+| 07:30 | ☀️ 早安 | 今日计划 + 抗衰老重点 |
+| 08:00 | 💧 喝水 + 维 C | 抗氧化补充 |
+| 10:00 | 💧 喝水 | 保持水分 |
+| 12:00 | 🍽️ 午餐 + 维 E | 营养补充 |
+| 14:00 | 💧 喝水 + 绿茶 | 抗氧化 |
+| 16:00 | 💧 喝水 | 保持水分 |
+| 17:00 | 🏃 运动 | 有氧 + 力量训练 |
+| 18:00 | 🍽️ 晚餐 + Omega-3 | 抗炎抗衰老 |
+| 20:00 | 🧘 拉伸 | 放松助眠 |
+| 21:00 | 🌙 晚间护肤 | 夜间修复 |
+| 21:30 | 😴 睡前准备 | 黄金睡眠时间 |
 
-### 2. 配置到 Health Guardian
-```json
-{
-  "notifications": {
-    "wechat_webhook": "你的 webhook URL",
-    "enabled": true
-  }
-}
-```
+## 🌟 抗衰老核心建议
 
-### 3. 测试通知
-```bash
-python scripts/health_guardian.py remind water
-```
+### 1. 营养补充
+- **维生素 C**：抗氧化、促进胶原蛋白
+- **维生素 E**：保护细胞膜、延缓衰老
+- **Omega-3**：抗炎、保护心血管
+- **多酚类**：绿茶、蓝莓、番茄
 
-## 📋 提醒时间表
+### 2. 皮肤护理
+- **晨间**：清洁→保湿→防晒
+- **晚间**：清洁→修复→滋养
+- **防晒**：每天使用，防止光老化
 
-| 类型 | 默认时间 | 说明 |
-|------|---------|------|
-| 💧 喝水 | 08:00, 10:00, 12:00, 14:00, 16:00, 18:00, 20:00 | 每次 250ml |
-| 🍽️ 用餐 | 07:30, 12:00, 18:00 | 三餐提醒 |
-| 🏃 运动 | 17:00 | 根据天气调整 |
-| 😴 睡前 | 21:30 | 睡前准备 |
+### 3. 运动健身
+- **有氧运动**：促进新陈代谢
+- **力量训练**：增加肌肉量、延缓衰老
+- **拉伸**：保持柔韧性、减少皱纹
 
-## 🌤️ 天气集成
-
-使用 [wttr.in](https://wttr.in) 获取天气：
-
-```bash
-# 测试天气 API
-curl wttr.in/北京?format=j1
-```
-
-根据天气自动调整：
-- 温度>30°C → 增加饮水 500ml，建议室内运动
-- 温度<10°C → 建议保暖，室内运动
-- 雨天 → 室内运动替代方案
-- 空气质量差 → 避免户外运动
+### 4. 睡眠优化
+- **时间**：22:30 入睡，保证 7-8 小时
+- **环境**：黑暗、安静、适宜温度
+- **设备**：睡眠呼吸暂停患者使用呼吸机
 
 ## ⚠️ 医疗免责声明
 
@@ -198,88 +206,7 @@ curl wttr.in/北京?format=j1
 - 如有健康问题，请咨询医生
 - 减肥计划应在专业人士指导下进行
 - 呼吸机使用请遵医嘱
-- 本技能不诊断、治疗任何疾病
-
-## 📁 项目结构
-
-```
-health-guardian/
-├── SKILL.md                  # 技能定义
-├── README.md                 # 本文件
-├── LICENSE                   # MIT 许可证
-├── _meta.json                # ClawHub 元数据
-├── scripts/
-│   ├── health_guardian.py    # 主脚本
-│   ├── notifications.py      # 通知模块
-│   ├── weather.py            # 天气集成
-│   └── calculations.py       # 健康计算
-└── references/
-    ├── health-guidelines.md  # 健康指南
-    └── notification-templates.md  # 通知模板
-```
-
-## 🆘 故障排除
-
-### Q: 微信通知不工作？
-A: 检查 webhook URL 是否正确，确保企业微信机器人已启用
-
-### Q: 天气数据获取失败？
-A: 检查网络连接，wttr.in 可能暂时不可用
-
-### Q: 提醒时间不准确？
-A: 检查系统时区设置，确认配置文件中的时间格式
-
-### Q: Python 依赖缺失？
-A: 安装依赖：`pip install requests`
-
-## 📊 使用示例
-
-### 完整使用流程
-
-```bash
-# 1. 初始化
-python scripts/health_guardian.py init
-
-# 2. 查看今日计划
-python scripts/health_guardian.py today
-
-# 3. 早上喝水
-python scripts/health_guardian.py log-water 250
-
-# 4. 午餐前
-python scripts/health_guardian.py remind meal
-
-# 5. 运动后
-python scripts/health_guardian.py log-weight 102.3
-
-# 6. 周末生成周报
-python scripts/health_guardian.py weekly-report
-```
-
-### 输出示例
-
-```
-📊 健康状态
-============================================================
-
-⚖️  体重指数
-   BMI: 32.5 (肥胖)
-   当前：103.0kg
-   目标：75.0kg
-   还需：28.0kg
-
-💧 今日饮水
-   1500ml / 3600ml (42%)
-
-📈 体重趋势
-   2026-03-06: 103.5kg
-   2026-03-07: 103.2kg
-   2026-03-08: 103.0kg
-   2026-03-09: 102.8kg
-   2026-03-10: 102.5kg
-
-============================================================
-```
+- 营养补充剂使用前请咨询医生
 
 ## 📞 支持
 
@@ -299,4 +226,4 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ---
 
-**健康是人生的第一财富！让 Health Guardian 陪你一起变健康！** 💪✨
+**健康是人生的第一财富！让 Health Guardian 陪你一起变健康、变年轻！** 💪✨
